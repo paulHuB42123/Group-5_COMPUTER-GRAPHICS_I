@@ -898,3 +898,9 @@
 
 1526093414 c:\program files (x86)\codeblocks\mingw\x86_64-w64-mingw32\include\_mingw_print_pop.h
 
+1659990398 source:c:\users\khurshed alam sifat\desktop\group-5_computer-graphics_i\bestoshohor\main.cpp
+	<Windows.h>
+	<GL/glut.h>
+	<math.h>
+	<stdio.h>
+
