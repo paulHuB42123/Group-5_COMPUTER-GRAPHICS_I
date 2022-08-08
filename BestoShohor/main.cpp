@@ -4,6 +4,26 @@
 #include<stdio.h>
 using namespace std;
 
+int sunStatus = 1;
+float sunX = 0;
+float sunY = 0;
+float sunSpeed = 0.02;
+
+int cloud1Status = 1;
+float cloud1X = 0;
+float cloud1Y = 0;
+float cloud1Speed = 0.21;
+
+int cloud2Status = 1;
+float cloud2X = 0;
+float cloud2Y = 0;
+float cloud2Speed = 0.25;
+
+int cloud3Status = 1;
+float cloud3X = 0;
+float cloud3Y = 0;
+float cloud3Speed = 0.23;
+
 void DrawCircle(float cx, float cy, float r, int num_segments)
 		{
 		 glBegin(GL_TRIANGLE_FAN);
@@ -414,6 +434,144 @@ glVertex2f(0,350);
 glEnd();
 }
 
+void sun(){
+
+    glColor3ub(249,215,28);
+    DrawCircle(100,380, 25, 10000);
+
+}
+
+void updatesun()
+{
+		if (sunStatus == 1)
+		{
+			if (sunY>=80)
+		{
+			sunY=80;
+		}
+		else sunY+=0.5;
+		}
+
+		glPushMatrix();
+		glTranslatef(sunX, sunY, 0);
+		sun();
+		glPopMatrix();
+	}
+
+void cloud1()
+{
+    glColor3ub(255,255,255);
+    DrawCircle(100,440, 15, 10000);
+
+    glColor3ub(255,255,255);
+    DrawCircle(115,450, 15, 10000);
+
+    glColor3ub(255,255,255);
+    DrawCircle(120,440, 15, 10000);
+
+    glColor3ub(255,255,255);
+    DrawCircle(133,465, 18, 10000);
+
+    glColor3ub(255,255,255);
+    DrawCircle(140,447, 15, 10000);
+
+    glColor3ub(255,255,255);
+    DrawCircle(153,455, 15, 10000);
+
+}
+
+void updatecloud1()
+	{
+		if (cloud1Status == 1)
+		{
+			cloud1X +=cloud1Speed;
+		}
+        if (cloud1X>600)
+		{
+			cloud1X =-150 ;
+		}
+		glPushMatrix();
+		glTranslatef(cloud1X, cloud1Y, 0);
+		cloud1();
+		glPopMatrix();
+	}
+
+void cloud2()
+{
+    glColor3ub(255,255,255);
+    DrawCircle(100+200,440+20, 15, 10000);
+
+    glColor3ub(255,255,255);
+    DrawCircle(115+200,450+20, 15, 10000);
+
+    glColor3ub(255,255,255);
+    DrawCircle(120+200,440+20, 15, 10000);
+
+    glColor3ub(255,255,255);
+    DrawCircle(133+200,465+20, 18, 10000);
+
+    glColor3ub(255,255,255);
+    DrawCircle(140+200,447+20, 15, 10000);
+
+    glColor3ub(255,255,255);
+    DrawCircle(153+200,455+20, 15, 10000);
+
+}
+
+void updatecloud2()
+	{
+		if (cloud2Status == 1)
+		{
+			cloud2X +=cloud2Speed;
+		}
+        if (cloud2X>400)
+		{
+			cloud2X =-340 ;
+		}
+		glPushMatrix();
+		glTranslatef(cloud2X, cloud2Y, 0);
+		cloud2();
+		glPopMatrix();
+	}
+
+void cloud3()
+{
+    glColor3ub(255,255,255);
+    DrawCircle(100+400,440, 15, 10000);
+
+    glColor3ub(255,255,255);
+    DrawCircle(115+400,450, 15, 10000);
+
+    glColor3ub(255,255,255);
+    DrawCircle(120+400,440, 15, 10000);
+
+    glColor3ub(255,255,255);
+    DrawCircle(133+400,465, 18, 10000);
+
+    glColor3ub(255,255,255);
+    DrawCircle(140+400,447, 15, 10000);
+
+    glColor3ub(255,255,255);
+    DrawCircle(153+400,455, 15, 10000);
+
+}
+
+void updatecloud3()
+	{
+		if (cloud3Status == 1)
+		{
+			cloud3X +=cloud3Speed;
+		}
+        if (cloud3X>200)
+		{
+			cloud3X =-550 ;
+		}
+		glPushMatrix();
+		glTranslatef(cloud3X, cloud3Y, 0);
+		cloud3();
+		glPopMatrix();
+	}
+
 void display() {
 glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer with current clearing color
 
@@ -421,6 +579,10 @@ glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer with current clearing co
 
 grass();
 sky();
+updatesun();
+updatecloud1();
+updatecloud2();
+updatecloud3();
 Road();
 river();
 Lamp();
