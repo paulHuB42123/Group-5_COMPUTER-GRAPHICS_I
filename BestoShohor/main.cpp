@@ -24,6 +24,11 @@ float cloud3X = 0;
 float cloud3Y = 0;
 float cloud3Speed = 0.23;
 
+int planStatus = 1;
+float planX = 0;
+float planY = 0;
+float planSpeed = 4;
+
 void DrawCircle(float cx, float cy, float r, int num_segments)
 		{
 		 glBegin(GL_TRIANGLE_FAN);
@@ -572,6 +577,82 @@ void updatecloud3()
 		glPopMatrix();
 	}
 
+void plan(){
+
+glBegin(GL_POLYGON);//rectangular body
+glColor3ub(192,192,192);
+glVertex2f(0,440);
+glVertex2f(0,465);
+glVertex2f(130,465.0);
+glVertex2f(130,440.0);
+glEnd();
+
+
+glBegin(GL_POLYGON);//outline of upper triangle plane
+glColor3ub(192,192,192);
+glVertex2f(130.0,465.0);
+glVertex2f(145.0,460.0);
+glVertex2f(150.0,460.0);
+glVertex2f(155.0,450.0);
+glVertex2f(130.0,450.0);
+glEnd();
+
+
+glBegin(GL_POLYGON);//lower triangle
+glColor3ub(169,169,169);
+glVertex2f(130.0,450.0);
+glVertex2f(155.0,450.0);
+glVertex2f(155.0,447.0);
+glVertex2f(140.0,440.0);
+glVertex2f(130.0,440.0);
+glEnd();
+
+
+glBegin(GL_POLYGON);//back wing
+glColor3ub(105,105,105);
+glVertex2f(0.0,465.0);
+glVertex2f(0.0,490.0);
+glVertex2f(5.0,490.0);
+glVertex2f(35.0,465.0);
+glEnd();
+
+
+glBegin(GL_POLYGON);//left side wing
+glColor3ub(105,105,105);
+glVertex2f(60.0,465.0);
+glVertex2f(45.0,480.0);
+glVertex2f(70.0,480.0);
+glVertex2f(85.0,465.0);
+glEnd();
+
+
+glBegin(GL_POLYGON);//rightside wing
+glColor3ub(105,105,105);
+glVertex2f(65.0,450.0);
+glVertex2f(95.0,450.0);
+glVertex2f(75.0,425.0);
+glVertex2f(45.0,425.0);
+
+glEnd();
+}
+
+
+void updateplan()
+	{
+		if (planStatus == 1)
+		{
+			planX +=planSpeed;
+		}
+        if (planX>600)
+		{
+			planX =-150 ;
+		}
+		glPushMatrix();
+		glTranslatef(planX, planY, 0);
+		plan();
+		glPopMatrix();
+	}
+
 void display() {
 glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer with current clearing color
 
@@ -583,6 +664,7 @@ updatesun();
 updatecloud1();
 updatecloud2();
 updatecloud3();
+updateplan();
 Road();
 river();
 Lamp();
