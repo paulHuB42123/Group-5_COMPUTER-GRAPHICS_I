@@ -29,6 +29,16 @@ float planX = 0;
 float planY = 0;
 float planSpeed = 4;
 
+int ship1Status = 1;
+float ship1X = 0;
+float ship1Y = 0;
+float ship1Speed1 = 0.8;
+
+int ship2Status = 1;
+float ship2X = 0;
+float ship2Y = 0;
+float ship2Speed = 0.6;
+
 void DrawCircle(float cx, float cy, float r, int num_segments)
 		{
 		 glBegin(GL_TRIANGLE_FAN);
@@ -413,6 +423,175 @@ glEnd();
     glEnd();
 }
 
+void ship1() // Sifat's part
+{
+glBegin(GL_QUADS); //
+glColor3ub(252, 44, 3);
+glVertex2f(430,160);
+glVertex2f(540,160);
+glVertex2f(570,185);
+glVertex2f(400,185);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub(96,96,96);
+glVertex2f(420,185);
+glVertex2f(550,185);
+glVertex2f(550,200);
+glVertex2f(420,200);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub(75,75,75);
+glVertex2f(430,200);
+glVertex2f(550,200);
+glVertex2f(540,215);
+glVertex2f(430,215);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub(255,255,255);
+glVertex2f(520,205-2);
+glVertex2f(550-2,205-2);
+glVertex2f(542,210+2);
+glVertex2f(520,210+2);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub(0,0,0);
+glVertex2f(450,215);
+glVertex2f(470,215);
+glVertex2f(470,232);
+glVertex2f(450,232);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub(252, 44, 3);
+glVertex2f(450,232);
+glVertex2f(470,232);
+glVertex2f(470,234);
+glVertex2f(450,234);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub(0,0,0);
+glVertex2f(450+30,215);
+glVertex2f(470+30,215);
+glVertex2f(470+30,232);
+glVertex2f(450+30,232);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub(252, 44, 3);
+glVertex2f(450+30,232);
+glVertex2f(470+30,232);
+glVertex2f(470+30,234);
+glVertex2f(450+30,234);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub(0,0,0);
+glVertex2f(450+30+30,215);
+glVertex2f(470+30+30,215);
+glVertex2f(470+30+30,232);
+glVertex2f(450+30+30,232);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub(252, 44, 3);
+glVertex2f(450+30+30,232);
+glVertex2f(470+30+30,232);
+glVertex2f(470+30+30,234);
+glVertex2f(450+30+30,234);
+glEnd();
+
+glColor3ub(255,255,255);
+DrawCircle(435, 170, 0, 10000);
+
+glColor3ub(255,255,255);
+DrawCircle(435+25, 170, 0, 10000);
+
+glColor3ub(255,255,255);
+DrawCircle(435+25+25, 170, 0, 10000);
+
+glColor3ub(255,255,255);
+DrawCircle(435+25+25+25, 170, 0, 10000);
+
+glColor3ub(255,255,255);
+DrawCircle(435+25+25+25+25, 170, 0, 10000);
+
+glColor3ub(255,255,255);
+DrawCircle(447, 192, 5, 1000);
+
+glColor3ub(255,255,255);
+DrawCircle(447+25, 192, 5, 1000);
+
+glColor3ub(255,255,255);
+DrawCircle(447+25+25, 192, 5, 1000);
+
+glColor3ub(255,255,255);
+DrawCircle(447+25+25+25, 192, 5, 1000);
+}
+
+	void updateship1()
+	{
+		if (ship1Status == 1)
+		{
+			ship1X +=ship1Speed1;
+		}
+        if (ship1X>350)
+		{
+			ship1X =-550 ;
+		}
+		glPushMatrix();
+		glTranslatef(ship1X, ship1Y, 0);
+		ship1();
+		glPopMatrix();
+	}
+
+void ship2()
+{
+glBegin(GL_QUADS);
+glColor3ub(25,25,112);
+glVertex2f(320,240);
+glVertex2f(380,240);
+glVertex2f(380,260);
+glVertex2f(300,260);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub(128,129,236);
+glVertex2f(320,260);
+glVertex2f(375,260);
+glVertex2f(375,275);
+glVertex2f(330,275);
+glEnd();
+
+glBegin(GL_QUADS);
+glColor3ub(220,20,60);
+glVertex2f(335,275);
+glVertex2f(370,275);
+glVertex2f(340,280);
+glVertex2f(345,280);
+glEnd();
+}
+
+void updateship2()
+	{
+		if (ship2Status == 1)
+		{
+			ship2X -=ship2Speed;
+		}
+        if (ship2X<-400)
+		{
+			ship2X =400 ;
+		}
+		glPushMatrix();
+		glTranslatef(ship2X, ship2Y, 0);
+		ship2();
+		glPopMatrix();
+	}
+
 void grass() // MARZIA MEHZABEEN's Part
 {
     glBegin(GL_QUADS);
@@ -439,11 +618,10 @@ glVertex2f(0,350);
 glEnd();
 }
 
-void sun(){
-
+void sun() // Sifat's part
+{
     glColor3ub(249,215,28);
     DrawCircle(100,380, 25, 10000);
-
 }
 
 void updatesun()
@@ -456,7 +634,6 @@ void updatesun()
 		}
 		else sunY+=0.5;
 		}
-
 		glPushMatrix();
 		glTranslatef(sunX, sunY, 0);
 		sun();
@@ -482,7 +659,6 @@ void cloud1()
 
     glColor3ub(255,255,255);
     DrawCircle(153,455, 15, 10000);
-
 }
 
 void updatecloud1()
@@ -520,7 +696,6 @@ void cloud2()
 
     glColor3ub(255,255,255);
     DrawCircle(153+200,455+20, 15, 10000);
-
 }
 
 void updatecloud2()
@@ -558,7 +733,6 @@ void cloud3()
 
     glColor3ub(255,255,255);
     DrawCircle(153+400,455, 15, 10000);
-
 }
 
 void updatecloud3()
@@ -577,8 +751,8 @@ void updatecloud3()
 		glPopMatrix();
 	}
 
-void plan(){
-
+void plan() // Sifat's part
+{
 glBegin(GL_POLYGON);//rectangular body
 glColor3ub(192,192,192);
 glVertex2f(0,440);
@@ -586,7 +760,6 @@ glVertex2f(0,465);
 glVertex2f(130,465.0);
 glVertex2f(130,440.0);
 glEnd();
-
 
 glBegin(GL_POLYGON);//outline of upper triangle plane
 glColor3ub(192,192,192);
@@ -597,7 +770,6 @@ glVertex2f(155.0,450.0);
 glVertex2f(130.0,450.0);
 glEnd();
 
-
 glBegin(GL_POLYGON);//lower triangle
 glColor3ub(169,169,169);
 glVertex2f(130.0,450.0);
@@ -607,7 +779,6 @@ glVertex2f(140.0,440.0);
 glVertex2f(130.0,440.0);
 glEnd();
 
-
 glBegin(GL_POLYGON);//back wing
 glColor3ub(105,105,105);
 glVertex2f(0.0,465.0);
@@ -615,7 +786,6 @@ glVertex2f(0.0,490.0);
 glVertex2f(5.0,490.0);
 glVertex2f(35.0,465.0);
 glEnd();
-
 
 glBegin(GL_POLYGON);//left side wing
 glColor3ub(105,105,105);
@@ -625,17 +795,14 @@ glVertex2f(70.0,480.0);
 glVertex2f(85.0,465.0);
 glEnd();
 
-
 glBegin(GL_POLYGON);//rightside wing
 glColor3ub(105,105,105);
 glVertex2f(65.0,450.0);
 glVertex2f(95.0,450.0);
 glVertex2f(75.0,425.0);
 glVertex2f(45.0,425.0);
-
 glEnd();
 }
-
 
 void updateplan()
 	{
@@ -655,7 +822,6 @@ void updateplan()
 
 void display() {
 glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer with current clearing color
-
  glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
 grass();
@@ -667,6 +833,8 @@ updatecloud3();
 updateplan();
 Road();
 river();
+updateship1();
+updateship2();
 Lamp();
 
 glFlush(); // Render now
