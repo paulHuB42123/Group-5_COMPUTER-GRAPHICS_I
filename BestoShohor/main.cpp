@@ -39,6 +39,26 @@ float ship2X = 0;
 float ship2Y = 0;
 float ship2Speed = 0.6;
 
+int carStatus1 = 1;
+float car1X = 0;
+float car1Y = 0;
+float carSpeed1 = 3;
+
+int car2Status = 1;
+float car2X = 0;
+float car2Y = 0;
+float car2Speed = 4;
+
+int busStatus1 = 1;
+float busX = 0;
+float busY = 0;
+float busSpeed1 = 3;
+
+int trackStatus = 1;
+float trackX = 0;
+float trackY = 0;
+float trackSpeed = 3;
+
 void DrawCircle(float cx, float cy, float r, int num_segments)
 		{
 		 glBegin(GL_TRIANGLE_FAN);
@@ -396,6 +416,325 @@ glEnd();
 glColor3ub(235, 230, 218);
 DrawCircle(589, 194, 7, 10000);
 }
+
+void car1() // Sifat's Part
+{
+glBegin(GL_POLYGON);
+glColor3ub(255,0,0);
+glVertex2f(40,118);
+glVertex2f(40,150 ); // x, y
+glVertex2f(160,150);
+glVertex2f(160,118);// x, y
+glEnd();
+
+glBegin(GL_QUADS); //car
+glColor3ub(255,0,0);
+glVertex2f(57,150);
+glVertex2f(80,175 ); // x, y
+glVertex2f(120,175);
+glVertex2f(142,150);// x, y
+glEnd();
+
+glBegin(GL_QUADS); //glass
+glColor3ub(0,0,102);
+glVertex2f(65,152);
+glVertex2f(80,170 ); // x, y
+glVertex2f(98,170);
+glVertex2f(98,152);// x, y
+glEnd();
+
+glBegin(GL_QUADS); //glass
+glColor3ub(0,0,102);
+glVertex2f(102,170);
+glVertex2f(120,170 ); // x, y
+glVertex2f(134,152);
+glVertex2f(102,152);// x, y
+glEnd();
+
+glColor3ub(0,0,0);
+DrawCircle(80, 125, 15, 10000);
+
+glColor3ub(255,255,255);
+DrawCircle(80, 125, 11, 10000);
+
+glColor3ub(0,0,0);
+DrawCircle(120, 125, 15, 10000);
+
+glColor3ub(255,255,255);
+DrawCircle(120, 125, 11, 10000);
+glEnd();
+}
+
+  	void updatecar1()
+	{
+		if (carStatus1 == 1)
+		{
+			car1X +=carSpeed1;
+		}
+        if (car1X>700)
+		{
+			car1X =-150 ;
+		}
+		glPushMatrix();
+		glTranslatef(car1X, car1Y, 0);
+		car1();
+		glPopMatrix();
+	}
+
+	void car2()
+    {
+    glBegin(GL_POLYGON);            // body
+    glColor3f(0,0,100);
+    glVertex2f(100,20);
+    glVertex2f(200,20);
+    glVertex2f(200,40);
+    glVertex2f(190,60);
+    glVertex2f(150,60);
+    glVertex2f(120,40);
+    glVertex2f(110,40);
+    glVertex2f(100,30);
+    glEnd();
+
+    glBegin(GL_POLYGON);            // front glass
+    glColor3f(0,0,0);
+    glVertex2f(150,57);
+    glVertex2f(145,50);
+    glVertex2f(130,40);
+    glVertex2f(160,40);
+    glVertex2f(160,57);
+    glEnd();
+
+    glBegin(GL_POLYGON);            // back glass
+    glColor3f(0,0,0);
+    glVertex2f(165,57);
+    glVertex2f(165,40);
+    glVertex2f(187,40);
+    glVertex2f(187,57);
+    glEnd();
+
+    glColor3ub(0,0,0);
+    DrawCircle(130, 23, 11, 10000);
+
+    glColor3ub(224,224,224);
+    DrawCircle(130, 23, 7, 10000);
+
+    glColor3ub(0,0,0);
+    DrawCircle(180, 23, 11, 10000);
+
+    glColor3ub(224,224,224);
+    DrawCircle(180, 23, 7, 10000);
+   glEnd();
+}
+
+    void updatecar2()
+	{
+		if (car2Status == 1)
+		{
+			car2X -=car2Speed;
+		}
+        if (car2X<-200)
+		{
+			car2X =600 ;
+		}
+		glPushMatrix();
+		glTranslatef(car2X, car2Y, 0);
+		car2();
+		glPopMatrix();
+	}
+
+	void bus()
+	{
+	   glBegin(GL_QUADS); //glass
+       glColor3ub(153,0,0);;
+       glVertex2f(620,20);
+       glVertex2f(450,20 ); // x, y
+       glVertex2f(450,60);
+       glVertex2f(620,60);// x, y
+       glEnd();
+
+       	glBegin(GL_POLYGON);
+        glColor3ub(153,0,0);
+        glVertex2f(620,60);
+        glVertex2f(620,100 );
+        glVertex2f(470,100);
+        glVertex2f(450,60);
+	   glEnd();
+
+	   glBegin(GL_POLYGON);   // font glass
+        glColor3ub(192,192,192);
+        glVertex2f(470,100);
+        glVertex2f(450,60);// x, y
+        glVertex2f(470,60);
+	   glEnd();
+
+	    glBegin(GL_POLYGON);    // big glass
+        glColor3ub(192,192,192);
+        glVertex2f(475,90);
+        glVertex2f(495,90);// x, y
+        glVertex2f(495,45);
+        glVertex2f(475,45);
+	    glEnd();
+
+        glLineWidth(1);
+	    glBegin(GL_LINE_LOOP);    // big glass
+        glColor3ub(0,0,0);
+        glVertex2f(475,90);
+        glVertex2f(495,90);// x, y
+        glVertex2f(495,45);
+        glVertex2f(475,45);
+	    glEnd();
+
+	    glBegin(GL_POLYGON);       // door
+        glColor3ub(255,255,255);
+        glVertex2f(495,90);// x, y
+        glVertex2f(495,40);
+        glVertex2f(510,40);
+        glVertex2f(510,90);// x, y
+	    glEnd();
+
+	     glBegin(GL_POLYGON);   // glass
+        glColor3ub(192,192,192);
+        glVertex2f(510,90);
+        glVertex2f(542,90);// x, y
+        glVertex2f(542,60);
+        glVertex2f(510,60);// x, y
+	    glEnd();
+
+	    glLineWidth(1);
+	    glBegin(GL_LINE_LOOP);  // glass
+        glColor3ub(0,0,0);
+        glVertex2f(510,90);
+        glVertex2f(542,90);// x, y
+        glVertex2f(542,60);
+        glVertex2f(510,60);// x, y
+	    glEnd();
+
+	     glBegin(GL_POLYGON);   // glass
+        glColor3ub(192,192,192);
+        glVertex2f(572,90);
+        glVertex2f(542,90);// x, y
+        glVertex2f(542,60);
+        glVertex2f(572,60);// x, y
+	    glEnd();
+
+	    glLineWidth(1);
+	    glBegin(GL_LINE_LOOP);  // glass
+        glColor3ub(0,0,0);
+        glVertex2f(580,90);
+        glVertex2f(542,90);// x, y
+        glVertex2f(542,60);
+        glVertex2f(580,60);// x, y
+	    glEnd();
+
+	    glBegin(GL_POLYGON);    // glass
+        glColor3ub(192,192,192);
+        glVertex2f(572,90);
+        glVertex2f(610,90);// x, y
+        glVertex2f(610,60);
+        glVertex2f(572,60);// x, y
+	    glEnd();
+
+	    glLineWidth(1);
+	    glBegin(GL_LINE_LOOP);  // glass
+        glColor3ub(0,0,0);
+        glVertex2f(572,90);
+        glVertex2f(610,90);// x, y
+        glVertex2f(610,60);
+        glVertex2f(572,60);// x, y
+	    glEnd();
+
+        glColor3ub(0,0,0);
+        DrawCircle(485, 23, 15, 10000);
+
+        glColor3ub(224,224,224);
+        DrawCircle(485, 23, 11, 10000);
+
+         glColor3ub(0,0,0);
+        DrawCircle(595, 23, 15, 10000);
+
+        glColor3ub(224,224,224);
+        DrawCircle(595, 23, 11, 10000);
+
+	}
+
+    void updatebus()
+	{
+		if (busStatus1 == 1)
+		{
+			busX -=busSpeed1;
+		}
+        if (busX<-620)
+		{
+			busX =320 ;
+		}
+		glPushMatrix();
+		glTranslatef(busX, busY, 0);
+		bus();
+		glPopMatrix();
+	}
+
+void track()
+{
+        glBegin(GL_POLYGON); // back part
+        glColor3ub(139,69,19);
+        glVertex2f(300,95);
+        glVertex2f(300,160);// x, y
+        glVertex2f(400,160);
+        glVertex2f(400,95);// x, y
+	    glEnd();
+
+	    glBegin(GL_POLYGON);  // front part
+        glColor3ub(186,85,211);
+        glVertex2f(400,95);
+        glVertex2f(400,150);// x, y
+        glVertex2f(430,150);
+        glVertex2f(450,120);// x, y
+        glVertex2f(450,95);// x, y
+	    glEnd();
+
+	     glBegin(GL_POLYGON);   // front part
+        glColor3ub(192,192,192);
+        glVertex2f(405,120);
+        glVertex2f(405,145);// x, y
+        glVertex2f(428,145);
+        glVertex2f(445,120);// x, y
+        glVertex2f(440,120);// x, y
+	    glEnd();
+
+	     glColor3ub(0,0,0);
+        DrawCircle(420, 97, 15, 10000);//front chaka
+
+        glColor3ub(224,224,224);
+        DrawCircle(420, 97, 11, 10000);
+
+         glColor3ub(0,0,0);
+        DrawCircle(420, 97, 9, 10000);//end
+
+         glColor3ub(0,0,0);
+        DrawCircle(330, 97, 15, 10000);//back chaka
+
+        glColor3ub(224,224,224);
+        DrawCircle(330, 97, 11, 10000);
+
+         glColor3ub(0,0,0);
+        DrawCircle(330, 97, 9, 10000);
+}
+
+void updatetrack()
+	{
+		if (trackStatus == 1)
+		{
+			trackX +=trackSpeed;
+		}
+        if (trackX>400)
+		{
+			trackX =-500 ;
+		}
+		glPushMatrix();
+		glTranslatef(trackX, trackY, 0);
+		track();
+		glPopMatrix();
+	}
 
 void river()// MARZIA MEHZABEEN's Part
 {
@@ -836,6 +1175,10 @@ river();
 updateship1();
 updateship2();
 Lamp();
+updatecar1();
+updatecar2();
+updatetrack();
+updatebus();
 
 glFlush(); // Render now
 glutPostRedisplay();
