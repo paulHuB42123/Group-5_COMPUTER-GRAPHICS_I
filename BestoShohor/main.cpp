@@ -4124,6 +4124,107 @@ glutSwapBuffers();
 void handleKeypress(unsigned char key, int x, int y)
 {
 switch (key) {
+case 'a':
+    carStatus1=0;
+    glutPostRedisplay();
+
+    break;
+case 'b':
+    carStatus1=1;
+
+    glutPostRedisplay();
+    break;
+
+case 'c':
+    busStatus1=0;
+    glutPostRedisplay();
+
+    break;
+case 'd':
+    busStatus1=1;
+
+    glutPostRedisplay();
+    break;
+
+case 'e':
+    ship1Status=0;
+    glutPostRedisplay();
+    break;
+
+case 'f':
+    ship1Status=1;
+    glutPostRedisplay();
+    break;
+
+case 'g':
+    ship2Status=0;
+    glutPostRedisplay();
+    break;
+
+case 'h':
+    ship2Status=1;
+    glutPostRedisplay();
+    break;
+
+case 'i':
+    car2Status=0;
+    glutPostRedisplay();
+    break;
+
+case 'j':
+    car2Status=1;
+    glutPostRedisplay();
+    break;
+case 'k':
+    cloud1Status=0;
+    glutPostRedisplay();
+    break;
+
+case 'l':
+    cloud1Status=1;
+    glutPostRedisplay();
+    break;
+
+case 'm':
+    cloud2Status=0;
+    glutPostRedisplay();
+    break;
+
+case 'n':
+    cloud2Status=1;
+    glutPostRedisplay();
+    break;
+
+case 'o':
+    cloud3Status=0;
+    glutPostRedisplay();
+    break;
+
+case 'p':
+    cloud3Status=1;
+    glutPostRedisplay();
+    break;
+
+case 'q':
+    planStatus=0;
+    glutPostRedisplay();
+    break;
+
+case 'r':
+    planStatus=1;
+    glutPostRedisplay();
+    break;
+
+case 's':
+    trackStatus=0;
+    glutPostRedisplay();
+    break;
+
+case 't':
+    trackStatus=1;
+    glutPostRedisplay();
+    break;
+
 case '1':
     glutDisplayFunc(midnightdisplay);
     glutPostRedisplay();
@@ -4132,8 +4233,9 @@ case '3':
     glutDisplayFunc(display);
     glutPostRedisplay();
     break;
-    }
+
     glutPostRedisplay();
+ }
 }
 
 void position(void)
