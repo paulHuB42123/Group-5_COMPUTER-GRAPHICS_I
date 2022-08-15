@@ -1020,7 +1020,7 @@ void drawHollowCircle(float x, float y, float radius){
 void glove()
 {
     glBegin(GL_QUADS); //D building
-    glColor3ub(160, 160, 160);
+    glColor3ub(192, 192, 192);
      glVertex2i(340,337);
      glVertex2i(480,337);
      glVertex2i(480,430);
@@ -1037,7 +1037,7 @@ void glove()
       glEnd();
 
       glBegin(GL_QUADS); //1
-    glColor3ub(51, 204, 255);
+    glColor3ub(0, 162, 232);
      glVertex2i(350,400);
      glVertex2i(370,400);
      glVertex2i(370,420);
@@ -1054,7 +1054,7 @@ void glove()
      glEnd();
 
      glBegin(GL_QUADS); //2
-    glColor3ub(51, 204, 255);
+    glColor3ub(0, 162, 232);
      glVertex2i(373,400);
      glVertex2i(393,400);
      glVertex2i(393,420);
@@ -1071,7 +1071,7 @@ void glove()
      glEnd();
 
      glBegin(GL_QUADS); //3
-    glColor3ub(51, 204, 255);
+    glColor3ub(0, 162, 232);
      glVertex2i(396,400);
      glVertex2i(416,400);
      glVertex2i(416,420);
@@ -1088,7 +1088,7 @@ void glove()
      glEnd();
 
      glBegin(GL_QUADS); //4
-    glColor3ub(51, 204, 255);
+    glColor3ub(0, 162, 232);
      glVertex2i(419,400);
      glVertex2i(439,400);
      glVertex2i(439,420);
@@ -1105,7 +1105,7 @@ void glove()
      glEnd();
 
      glBegin(GL_QUADS); //5
-    glColor3ub(51, 204, 255);
+    glColor3ub(0, 162, 232);
      glVertex2i(442,400);
      glVertex2i(462,400);
      glVertex2i(462,420);
@@ -1122,7 +1122,7 @@ void glove()
      glEnd();
 
      glBegin(GL_QUADS); //6
-    glColor3ub(51, 204, 255);
+    glColor3ub(0, 162, 232);
      glVertex2i(350,377);
      glVertex2i(370,377);
      glVertex2i(370,397);
@@ -1139,7 +1139,7 @@ void glove()
      glEnd();
 
      glBegin(GL_QUADS); //7
-    glColor3ub(51, 204, 255);
+    glColor3ub(0, 162, 232);
      glVertex2i(373,377);
      glVertex2i(393,377);
      glVertex2i(393,397);
@@ -1156,7 +1156,7 @@ void glove()
      glEnd();
 
      glBegin(GL_QUADS); //8
-    glColor3ub(51, 204, 255);
+    glColor3ub(0, 162, 232);
      glVertex2i(396,377);
      glVertex2i(416,377);
      glVertex2i(416,397);
@@ -1173,7 +1173,7 @@ void glove()
      glEnd();
 
      glBegin(GL_QUADS); //9
-    glColor3ub(51, 204, 255);
+    glColor3ub(0, 162, 232);
      glVertex2i(419,377);
      glVertex2i(439,377);
      glVertex2i(439,397);
@@ -1190,7 +1190,7 @@ void glove()
      glEnd();
 
      glBegin(GL_QUADS); //10
-    glColor3ub(51, 204, 255);
+    glColor3ub(0, 162, 232);
      glVertex2i(442,377);
      glVertex2i(462,377);
      glVertex2i(462,397);
@@ -1207,7 +1207,7 @@ void glove()
      glEnd();
 
      glBegin(GL_QUADS); //door
-    glColor3ub(51, 204, 255);
+    glColor3ub(0, 162, 232);
      glVertex2i(360,340);
      glVertex2i(400,340);
      glVertex2i(400,373);
@@ -1234,143 +1234,181 @@ void glove()
 
 
 
-   glColor3ub(160, 166, 158);
+   glColor3ub(192, 192, 192);
     DrawCircle(310,385, 55, 100000);
     glColor3ub(0, 0, 0);
     drawHollowCircle(310,385, 55);
     glBegin(GL_QUADS);
-    glColor3ub(160, 166, 158);
+    glColor3ub(192, 192, 192);
      glVertex2i(275,325);
      glVertex2i(343,325);
-     glVertex2i(343,350);
-     glVertex2i(275,350);
+     glVertex2i(343,342);
+     glVertex2i(275,342);
       glEnd();
-     glLineWidth(0.5);
+     glLineWidth(0.3);
       glBegin(GL_LINE_LOOP);
       glColor3ub(0 ,0, 0);
       glVertex2i(275,325);
      glVertex2i(343,325);
-     glVertex2i(343,350);
-     glVertex2i(275,350);
+     glVertex2i(343,342);
+     glVertex2i(275,342);
     glEnd();
 
     glBegin(GL_QUADS); //1
-    glColor3ub(51, 204, 255);
-     glVertex2i(260,390);
-     glVertex2i(292,390);
-     glVertex2i(292,405);
-     glVertex2i(260,405);
+    glColor3ub(0, 162, 232);
+     glVertex2i(262,411);
+     glVertex2i(357,411);
+     glVertex2i(350,422);
+     glVertex2i(269,422);
       glEnd();
 
-      glLineWidth(1.2);
+      glLineWidth(0.3);
       glBegin(GL_LINE_LOOP);
       glColor3ub(0 ,0, 0);
-      glVertex2i(260,390);
-     glVertex2i(292,390);
-     glVertex2i(292,405);
-     glVertex2i(260,405);
+      glVertex2i(262,411);
+     glVertex2i(293,411);
+     glVertex2i(293,422);
+     glVertex2i(269,422);
      glEnd();
 
-    glBegin(GL_QUADS); //2
-    glColor3ub(51, 204, 255);
-     glVertex2i(295,390);
-     glVertex2i(327,390);
-     glVertex2i(327,405);
-     glVertex2i(295,405);
-      glEnd();
-
-      glLineWidth(1.2);
+      glLineWidth(0.3);
       glBegin(GL_LINE_LOOP);
       glColor3ub(0 ,0, 0);
-      glVertex2i(295,390);
-     glVertex2i(327,390);
-     glVertex2i(327,405);
-     glVertex2i(295,405);
+      glVertex2i(293,411);
+     glVertex2i(328,411);
+     glVertex2i(328,422);
+     glVertex2i(293,422);
+    glEnd();
+
+      glLineWidth(0.3);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(0 ,0, 0);
+      glVertex2i(328,411);
+     glVertex2i(357,411);
+     glVertex2i(350,422);
+     glVertex2i(328,422);
+    glEnd();
+
+    glBegin(GL_QUADS); //2
+    glColor3ub(0, 162, 232);
+     glVertex2i(256,396);
+     glVertex2i(363,396);
+     glVertex2i(359,407);
+     glVertex2i(259,407);
+      glEnd();
+
+      glLineWidth(0.3);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(0 ,0, 0);
+      glVertex2i(256,396);
+     glVertex2i(293,396);
+     glVertex2i(293,407);
+     glVertex2i(259,407);
+     glEnd();
+
+      glLineWidth(0.3);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(0 ,0, 0);
+      glVertex2i(293,396);
+     glVertex2i(328,396);
+     glVertex2i(328,407);
+     glVertex2i(293,407);
+    glEnd();
+
+      glLineWidth(0.3);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(0 ,0, 0);
+      glVertex2i(328,396);
+     glVertex2i(363,396);
+     glVertex2i(359,407);
+     glVertex2i(328,407);
     glEnd();
 
     glBegin(GL_QUADS); //3
-    glColor3ub(51, 204, 255);
-     glVertex2i(330,390);
-     glVertex2i(360,390);
-     glVertex2i(360,405);
-     glVertex2i(330,405);
+    glColor3ub(0, 162, 232);
+     glVertex2i(256,381);
+     glVertex2i(364,381);
+     glVertex2i(364,392);
+     glVertex2i(256,392);
       glEnd();
 
-      glLineWidth(1.2);
+      glLineWidth(0.3);
       glBegin(GL_LINE_LOOP);
       glColor3ub(0 ,0, 0);
-      glVertex2i(330,390);
-     glVertex2i(360,390);
-     glVertex2i(360,405);
-     glVertex2i(330,405);
+      glVertex2i(256,381);
+     glVertex2i(293,381);
+     glVertex2i(293,392);
+     glVertex2i(256,392);
+     glEnd();
+
+      glLineWidth(0.3);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(0 ,0, 0);
+      glVertex2i(293,381);
+     glVertex2i(328,381);
+     glVertex2i(328,392);
+     glVertex2i(293,392);
     glEnd();
 
-      glBegin(GL_QUADS);//4
-      glColor3ub(51, 204, 255);
-     glVertex2i(330,368);
-     glVertex2i(360,368);
-     glVertex2i(360,383);
-     glVertex2i(330,383);
-      glEnd();
-
-      glLineWidth(1.2);
+      glLineWidth(0.3);
       glBegin(GL_LINE_LOOP);
       glColor3ub(0 ,0, 0);
-      glVertex2i(330,368);
-     glVertex2i(360,368);
-     glVertex2i(360,383);
-     glVertex2i(330,383);
+      glVertex2i(328,381);
+     glVertex2i(364,381);
+     glVertex2i(364,392);
+     glVertex2i(328,392);
+    glEnd();
+
+    glBegin(GL_QUADS); //4
+    glColor3ub(0, 162, 232);
+     glVertex2i(259,366);
+     glVertex2i(360,366);
+     glVertex2i(363,377);
+     glVertex2i(257,377);
+      glEnd();
+
+      glLineWidth(0.3);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(0 ,0, 0);
+      glVertex2i(259,366);
+     glVertex2i(293,366);
+     glVertex2i(293,377);
+     glVertex2i(256,377);
      glEnd();
+
+      glLineWidth(0.3);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(0 ,0, 0);
+      glVertex2i(293,366);
+     glVertex2i(328,366);
+     glVertex2i(328,377);
+     glVertex2i(293,377);
+    glEnd();
+
+      glLineWidth(0.3);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(0 ,0, 0);
+      glVertex2i(328,366);
+     glVertex2i(360,366);
+     glVertex2i(363,377);
+     glVertex2i(328,377);
+    glEnd();
 
       glBegin(GL_QUADS); //5
-    glColor3ub(51, 204, 255);
-     glVertex2i(295,368);
-     glVertex2i(327,368);
-     glVertex2i(327,383);
-     glVertex2i(295,383);
+    glColor3ub(0, 162, 232);
+     glVertex2i(269,351);
+     glVertex2i(352,351);
+     glVertex2i(358,362);
+     glVertex2i(262,362);
       glEnd();
 
-      glLineWidth(1.2);
+      glLineWidth(0.3);
       glBegin(GL_LINE_LOOP);
       glColor3ub(0 ,0, 0);
-      glVertex2i(295,368);
-     glVertex2i(327,368);
-     glVertex2i(327,383);
-     glVertex2i(295,383);
-     glEnd();
-
-     glBegin(GL_QUADS); //6
-    glColor3ub(51, 204, 255);
-     glVertex2i(260,368);
-     glVertex2i(292,368);
-     glVertex2i(292,383);
-     glVertex2i(260,383);
-      glEnd();
-
-      glLineWidth(1.2);
-      glBegin(GL_LINE_LOOP);
-      glColor3ub(0 ,0, 0);
-      glVertex2i(260,368);
-     glVertex2i(292,368);
-     glVertex2i(292,383);
-     glVertex2i(260,383);
-     glEnd();
-
-      glBegin(GL_QUADS); //7
-    glColor3ub(51, 204, 255);
-     glVertex2i(270,349);
-     glVertex2i(347,349);
-     glVertex2i(347,363);
-     glVertex2i(270,363);
-      glEnd();
-
-      glLineWidth(1.2);
-      glBegin(GL_LINE_LOOP);
-      glColor3ub(0 ,0, 0);
-      glVertex2i(270,349);
-     glVertex2i(347,349);
-     glVertex2i(347,363);
-     glVertex2i(270,363);
+      glVertex2i(269,351);
+     glVertex2i(352,351);
+     glVertex2i(358,362);
+     glVertex2i(262,362);
      glEnd();
 
 }
@@ -2237,7 +2275,7 @@ void updatecloud3()
 void plan() // Sifat's part
 {
 glBegin(GL_POLYGON);//rectangular body
-glColor3ub(192,192,192);
+glColor3ub(192,160,188);
 glVertex2f(0,440);
 glVertex2f(0,465);
 glVertex2f(130,465.0);
@@ -2245,7 +2283,7 @@ glVertex2f(130,440.0);
 glEnd();
 
 glBegin(GL_POLYGON);//outline of upper triangle plane
-glColor3ub(192,192,192);
+glColor3ub(192,160,188);
 glVertex2f(130.0,465.0);
 glVertex2f(145.0,460.0);
 glVertex2f(150.0,460.0);
@@ -2254,7 +2292,7 @@ glVertex2f(130.0,450.0);
 glEnd();
 
 glBegin(GL_POLYGON);//lower triangle
-glColor3ub(169,169,169);
+glColor3ub(180,139,173);
 glVertex2f(130.0,450.0);
 glVertex2f(155.0,450.0);
 glVertex2f(155.0,447.0);
@@ -2263,7 +2301,7 @@ glVertex2f(130.0,440.0);
 glEnd();
 
 glBegin(GL_POLYGON);//back wing
-glColor3ub(105,105,105);
+glColor3ub(254,65,65);
 glVertex2f(0.0,465.0);
 glVertex2f(0.0,490.0);
 glVertex2f(5.0,490.0);
@@ -2271,7 +2309,7 @@ glVertex2f(35.0,465.0);
 glEnd();
 
 glBegin(GL_POLYGON);//left side wing
-glColor3ub(105,105,105);
+glColor3ub(254,65,65);
 glVertex2f(60.0,465.0);
 glVertex2f(45.0,480.0);
 glVertex2f(70.0,480.0);
@@ -2279,7 +2317,7 @@ glVertex2f(85.0,465.0);
 glEnd();
 
 glBegin(GL_POLYGON);//rightside wing
-glColor3ub(105,105,105);
+glColor3ub(254,65,65);
 glVertex2f(65.0,450.0);
 glVertex2f(95.0,450.0);
 glVertex2f(75.0,425.0);
@@ -2335,9 +2373,8 @@ glutSwapBuffers();
 
 void nightglove()
 {
-
     glBegin(GL_QUADS); //D building
-    glColor3ub(160, 160, 160);
+    glColor3ub(127, 127, 127);
      glVertex2i(340,337);
      glVertex2i(480,337);
      glVertex2i(480,430);
@@ -2354,7 +2391,7 @@ void nightglove()
       glEnd();
 
       glBegin(GL_QUADS); //1
-    glColor3ub(255,255,51);
+    glColor3ub(0, 162, 232);
      glVertex2i(350,400);
      glVertex2i(370,400);
      glVertex2i(370,420);
@@ -2371,7 +2408,7 @@ void nightglove()
      glEnd();
 
      glBegin(GL_QUADS); //2
-    glColor3ub(255,255,51);
+    glColor3ub(0, 162, 232);
      glVertex2i(373,400);
      glVertex2i(393,400);
      glVertex2i(393,420);
@@ -2388,7 +2425,7 @@ void nightglove()
      glEnd();
 
      glBegin(GL_QUADS); //3
-    glColor3ub(255,255,51);
+    glColor3ub(0, 162, 232);
      glVertex2i(396,400);
      glVertex2i(416,400);
      glVertex2i(416,420);
@@ -2405,7 +2442,7 @@ void nightglove()
      glEnd();
 
      glBegin(GL_QUADS); //4
-    glColor3ub(255,255,51);
+    glColor3ub(0, 162, 232);
      glVertex2i(419,400);
      glVertex2i(439,400);
      glVertex2i(439,420);
@@ -2422,7 +2459,7 @@ void nightglove()
      glEnd();
 
      glBegin(GL_QUADS); //5
-    glColor3ub(255,255,51);
+    glColor3ub(0, 162, 232);
      glVertex2i(442,400);
      glVertex2i(462,400);
      glVertex2i(462,420);
@@ -2439,7 +2476,7 @@ void nightglove()
      glEnd();
 
      glBegin(GL_QUADS); //6
-    glColor3ub(255,255,51);
+    glColor3ub(0, 162, 232);
      glVertex2i(350,377);
      glVertex2i(370,377);
      glVertex2i(370,397);
@@ -2456,7 +2493,7 @@ void nightglove()
      glEnd();
 
      glBegin(GL_QUADS); //7
-    glColor3ub(255,255,51);
+    glColor3ub(0, 162, 232);
      glVertex2i(373,377);
      glVertex2i(393,377);
      glVertex2i(393,397);
@@ -2473,7 +2510,7 @@ void nightglove()
      glEnd();
 
      glBegin(GL_QUADS); //8
-    glColor3ub(255,255,51);
+    glColor3ub(0, 162, 232);
      glVertex2i(396,377);
      glVertex2i(416,377);
      glVertex2i(416,397);
@@ -2490,7 +2527,7 @@ void nightglove()
      glEnd();
 
      glBegin(GL_QUADS); //9
-    glColor3ub(255,255,51);
+    glColor3ub(0, 162, 232);
      glVertex2i(419,377);
      glVertex2i(439,377);
      glVertex2i(439,397);
@@ -2507,7 +2544,7 @@ void nightglove()
      glEnd();
 
      glBegin(GL_QUADS); //10
-    glColor3ub(255,255,51);
+    glColor3ub(0, 162, 232);
      glVertex2i(442,377);
      glVertex2i(462,377);
      glVertex2i(462,397);
@@ -2524,7 +2561,7 @@ void nightglove()
      glEnd();
 
      glBegin(GL_QUADS); //door
-    glColor3ub(255,255,51);
+    glColor3ub(0, 162, 232);
      glVertex2i(360,340);
      glVertex2i(400,340);
      glVertex2i(400,373);
@@ -2551,143 +2588,181 @@ void nightglove()
 
 
 
-   glColor3ub(160, 166, 158);
+   glColor3ub(127, 127, 127);
     DrawCircle(310,385, 55, 100000);
     glColor3ub(0, 0, 0);
     drawHollowCircle(310,385, 55);
     glBegin(GL_QUADS);
-    glColor3ub(160, 166, 158);
+    glColor3ub(127, 127, 127);
      glVertex2i(275,325);
      glVertex2i(343,325);
-     glVertex2i(343,350);
-     glVertex2i(275,350);
+     glVertex2i(343,342);
+     glVertex2i(275,342);
       glEnd();
-     glLineWidth(0.5);
+     glLineWidth(0.3);
       glBegin(GL_LINE_LOOP);
       glColor3ub(0 ,0, 0);
       glVertex2i(275,325);
      glVertex2i(343,325);
-     glVertex2i(343,350);
-     glVertex2i(275,350);
+     glVertex2i(343,342);
+     glVertex2i(275,342);
     glEnd();
 
     glBegin(GL_QUADS); //1
-    glColor3ub(255,255,51);
-     glVertex2i(260,390);
-     glVertex2i(292,390);
-     glVertex2i(292,405);
-     glVertex2i(260,405);
+    glColor3ub(0, 162, 232);
+     glVertex2i(262,411);
+     glVertex2i(357,411);
+     glVertex2i(350,422);
+     glVertex2i(269,422);
       glEnd();
 
-      glLineWidth(1.2);
+      glLineWidth(0.3);
       glBegin(GL_LINE_LOOP);
       glColor3ub(0 ,0, 0);
-      glVertex2i(260,390);
-     glVertex2i(292,390);
-     glVertex2i(292,405);
-     glVertex2i(260,405);
+      glVertex2i(262,411);
+     glVertex2i(293,411);
+     glVertex2i(293,422);
+     glVertex2i(269,422);
      glEnd();
 
-    glBegin(GL_QUADS); //2
-    glColor3ub(255,255,51);
-     glVertex2i(295,390);
-     glVertex2i(327,390);
-     glVertex2i(327,405);
-     glVertex2i(295,405);
-      glEnd();
-
-      glLineWidth(1.2);
+      glLineWidth(0.3);
       glBegin(GL_LINE_LOOP);
       glColor3ub(0 ,0, 0);
-      glVertex2i(295,390);
-     glVertex2i(327,390);
-     glVertex2i(327,405);
-     glVertex2i(295,405);
+      glVertex2i(293,411);
+     glVertex2i(328,411);
+     glVertex2i(328,422);
+     glVertex2i(293,422);
+    glEnd();
+
+      glLineWidth(0.3);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(0 ,0, 0);
+      glVertex2i(328,411);
+     glVertex2i(357,411);
+     glVertex2i(350,422);
+     glVertex2i(328,422);
+    glEnd();
+
+    glBegin(GL_QUADS); //2
+    glColor3ub(0, 162, 232);
+     glVertex2i(256,396);
+     glVertex2i(363,396);
+     glVertex2i(359,407);
+     glVertex2i(259,407);
+      glEnd();
+
+      glLineWidth(0.3);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(0 ,0, 0);
+      glVertex2i(256,396);
+     glVertex2i(293,396);
+     glVertex2i(293,407);
+     glVertex2i(259,407);
+     glEnd();
+
+      glLineWidth(0.3);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(0 ,0, 0);
+      glVertex2i(293,396);
+     glVertex2i(328,396);
+     glVertex2i(328,407);
+     glVertex2i(293,407);
+    glEnd();
+
+      glLineWidth(0.3);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(0 ,0, 0);
+      glVertex2i(328,396);
+     glVertex2i(363,396);
+     glVertex2i(359,407);
+     glVertex2i(328,407);
     glEnd();
 
     glBegin(GL_QUADS); //3
-    glColor3ub(255,255,51);
-     glVertex2i(330,390);
-     glVertex2i(360,390);
-     glVertex2i(360,405);
-     glVertex2i(330,405);
+    glColor3ub(0, 162, 232);
+     glVertex2i(256,381);
+     glVertex2i(364,381);
+     glVertex2i(364,392);
+     glVertex2i(256,392);
       glEnd();
 
-      glLineWidth(1.2);
+      glLineWidth(0.3);
       glBegin(GL_LINE_LOOP);
       glColor3ub(0 ,0, 0);
-      glVertex2i(330,390);
-     glVertex2i(360,390);
-     glVertex2i(360,405);
-     glVertex2i(330,405);
+      glVertex2i(256,381);
+     glVertex2i(293,381);
+     glVertex2i(293,392);
+     glVertex2i(256,392);
+     glEnd();
+
+      glLineWidth(0.3);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(0 ,0, 0);
+      glVertex2i(293,381);
+     glVertex2i(328,381);
+     glVertex2i(328,392);
+     glVertex2i(293,392);
     glEnd();
 
-      glBegin(GL_QUADS);//4
-      glColor3ub(255,255,51);
-     glVertex2i(330,368);
-     glVertex2i(360,368);
-     glVertex2i(360,383);
-     glVertex2i(330,383);
-      glEnd();
-
-      glLineWidth(1.2);
+      glLineWidth(0.3);
       glBegin(GL_LINE_LOOP);
       glColor3ub(0 ,0, 0);
-      glVertex2i(330,368);
-     glVertex2i(360,368);
-     glVertex2i(360,383);
-     glVertex2i(330,383);
+      glVertex2i(328,381);
+     glVertex2i(364,381);
+     glVertex2i(364,392);
+     glVertex2i(328,392);
+    glEnd();
+
+    glBegin(GL_QUADS); //4
+    glColor3ub(0, 162, 232);
+     glVertex2i(259,366);
+     glVertex2i(360,366);
+     glVertex2i(363,377);
+     glVertex2i(257,377);
+      glEnd();
+
+      glLineWidth(0.3);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(0 ,0, 0);
+      glVertex2i(259,366);
+     glVertex2i(293,366);
+     glVertex2i(293,377);
+     glVertex2i(256,377);
      glEnd();
+
+      glLineWidth(0.3);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(0 ,0, 0);
+      glVertex2i(293,366);
+     glVertex2i(328,366);
+     glVertex2i(328,377);
+     glVertex2i(293,377);
+    glEnd();
+
+      glLineWidth(0.3);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(0 ,0, 0);
+      glVertex2i(328,366);
+     glVertex2i(360,366);
+     glVertex2i(363,377);
+     glVertex2i(328,377);
+    glEnd();
 
       glBegin(GL_QUADS); //5
-    glColor3ub(255,255,51);
-     glVertex2i(295,368);
-     glVertex2i(327,368);
-     glVertex2i(327,383);
-     glVertex2i(295,383);
+    glColor3ub(0, 162, 232);
+     glVertex2i(269,351);
+     glVertex2i(352,351);
+     glVertex2i(358,362);
+     glVertex2i(262,362);
       glEnd();
 
-      glLineWidth(1.2);
+      glLineWidth(0.3);
       glBegin(GL_LINE_LOOP);
       glColor3ub(0 ,0, 0);
-      glVertex2i(295,368);
-     glVertex2i(327,368);
-     glVertex2i(327,383);
-     glVertex2i(295,383);
-     glEnd();
-
-     glBegin(GL_QUADS); //6
-    glColor3ub(255,255,51);
-     glVertex2i(260,368);
-     glVertex2i(292,368);
-     glVertex2i(292,383);
-     glVertex2i(260,383);
-      glEnd();
-
-      glLineWidth(1.2);
-      glBegin(GL_LINE_LOOP);
-      glColor3ub(0 ,0, 0);
-      glVertex2i(260,368);
-     glVertex2i(292,368);
-     glVertex2i(292,383);
-     glVertex2i(260,383);
-     glEnd();
-
-      glBegin(GL_QUADS); //7
-    glColor3ub(255,255,51);
-     glVertex2i(270,349);
-     glVertex2i(347,349);
-     glVertex2i(347,363);
-     glVertex2i(270,363);
-      glEnd();
-
-      glLineWidth(1.2);
-      glBegin(GL_LINE_LOOP);
-      glColor3ub(0 ,0, 0);
-      glVertex2i(270,349);
-     glVertex2i(347,349);
-     glVertex2i(347,363);
-     glVertex2i(270,363);
+      glVertex2i(269,351);
+     glVertex2i(352,351);
+     glVertex2i(358,362);
+     glVertex2i(262,362);
      glEnd();
 }
 //MIDNIGHT tomal's part
@@ -5748,7 +5823,7 @@ glutInit(&argc, argv);
 glutInitDisplayMode( GLUT_SINGLE | GLUT_RGB );
 glutInitWindowSize(1100,700);
 glutCreateWindow("BESTO SHOHOR");
-glutDisplayFunc(midnightdisplay);
+glutDisplayFunc(display);
 position();
 glutKeyboardFunc(handleKeypress);
 
