@@ -2212,54 +2212,137 @@ void updatecloud3()
 
 void plan() // Sifat's part
 {
-glBegin(GL_POLYGON);//rectangular body
-glColor3ub(192,160,188);
-glVertex2f(0,440);
-glVertex2f(0,465);
-glVertex2f(130,465.0);
-glVertex2f(130,440.0);
+ glBegin(GL_QUADS); //plane
+glColor3ub(234,234,234);
+glVertex2f(100,455 ); // x, y
+glVertex2f(140,455);
+glVertex2f(140,470); // x, y
+glVertex2f(100,470);
+glEnd();
+
+glBegin(GL_QUADS); //body
+glColor3ub(234,234,234);
+glVertex2f(50,460 ); // x, y
+glVertex2f(100,455);
+glVertex2f(100,470); // x, y
+glVertex2f(50,470);
 glEnd();
 
 glBegin(GL_POLYGON);//outline of upper triangle plane
-glColor3ub(192,160,188);
-glVertex2f(130.0,465.0);
-glVertex2f(145.0,460.0);
-glVertex2f(150.0,460.0);
-glVertex2f(155.0,450.0);
-glVertex2f(130.0,450.0);
-glEnd();
-
-glBegin(GL_POLYGON);//lower triangle
-glColor3ub(180,139,173);
-glVertex2f(130.0,450.0);
-glVertex2f(155.0,450.0);
-glVertex2f(155.0,447.0);
-glVertex2f(140.0,440.0);
-glVertex2f(130.0,440.0);
-glEnd();
-
-glBegin(GL_POLYGON);//back wing
-glColor3ub(254,65,65);
-glVertex2f(0.0,465.0);
-glVertex2f(0.0,490.0);
-glVertex2f(5.0,490.0);
-glVertex2f(35.0,465.0);
+glColor3ub(234,234,234);
+glVertex2f(140.0,470.0);
+glVertex2f(155.0,465.0);
+glVertex2f(160.0,465.0);
+glVertex2f(165.0,457.0);
+glVertex2f(140.0,455.0);
 glEnd();
 
 glBegin(GL_POLYGON);//left side wing
-glColor3ub(254,65,65);
-glVertex2f(60.0,465.0);
-glVertex2f(45.0,480.0);
-glVertex2f(70.0,480.0);
-glVertex2f(85.0,465.0);
+glColor3ub(112,146,190);
+glVertex2f(99.0,470.0);
+glVertex2f(84.0,480.0);
+glVertex2f(105.0,480.0);
+glVertex2f(120.0,470.0);
 glEnd();
 
+glLineWidth(0.1);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(110 ,110, 110);
+      glVertex2f(70,462 ); // x, y
+      glVertex2f(75,462);
+    glEnd();
+
+    glLineWidth(0.1);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(110 ,110, 110);
+      glVertex2f(77,462 ); // x, y
+      glVertex2f(82,462);
+    glEnd();
+
+    glLineWidth(0.1);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(110 ,110, 110);
+      glVertex2f(84,462 ); // x, y
+      glVertex2f(89,462);
+    glEnd();
+
+    glLineWidth(0.1);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(110 ,110, 110);
+      glVertex2f(91,462 ); // x, y
+      glVertex2f(96,462);
+    glEnd();
+
+    glLineWidth(0.1);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(110 ,110, 110);
+      glVertex2f(98,462 ); // x, y
+      glVertex2f(103,462);
+    glEnd();
+
+    glLineWidth(0.1);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(110 ,110, 110);
+      glVertex2f(105,462 ); // x, y
+      glVertex2f(110,462);
+    glEnd();
+
+    glLineWidth(0.1);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(110 ,110, 110);
+      glVertex2f(112,462 ); // x, y
+      glVertex2f(117,462);
+    glEnd();
+
+    glLineWidth(0.1);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(110 ,110, 110);
+      glVertex2f(119,462 ); // x, y
+      glVertex2f(124,462);
+    glEnd();
+
+    glLineWidth(0.1);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(110 ,110, 110);
+      glVertex2f(126,462 ); // x, y
+      glVertex2f(131,462);
+    glEnd();
+
+    glLineWidth(0.1);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(110 ,110, 110);
+      glVertex2f(133,462 ); // x, y
+      glVertex2f(138,462);
+    glEnd();
+
+    glLineWidth(0.1);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(110 ,110, 110);
+      glVertex2f(140,462 ); // x, y
+      glVertex2f(143,462);
+    glEnd();
+
+    glLineWidth(0.1);
+      glBegin(GL_LINE_LOOP);
+      glColor3ub(110 ,110, 110);
+      glVertex2f(144,462 ); // x, y
+      glVertex2f(150,462);
+    glEnd();
+
 glBegin(GL_POLYGON);//rightside wing
-glColor3ub(254,65,65);
-glVertex2f(65.0,450.0);
-glVertex2f(95.0,450.0);
-glVertex2f(75.0,425.0);
-glVertex2f(45.0,425.0);
+glColor3ub(112,146,190);
+glVertex2f(99.0,462.0);
+glVertex2f(120.0,462);
+glVertex2f(100.0,445.0);
+glVertex2f(79.0,445.0);
+glEnd();
+
+glBegin(GL_POLYGON);//back wing
+glColor3ub(112,146,190);
+glVertex2f(50,470.0);
+glVertex2f(50,485.0);
+glVertex2f(55.0,485.0);
+glVertex2f(70.0,470.0);
 glEnd();
 }
 
